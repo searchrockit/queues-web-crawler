@@ -1,0 +1,31 @@
+{ "name": "queues-web-crawler"
+, "main": "src/index.ts"
+, "compatibility_date": "2023-06-09"
+, "compatibility_flags": 
+    [ "nodejs_compat"
+    ]
+, "usage_model": "unbound"
+, "browser": 
+    { "binding": "CRAWLER_BROWSER"
+    }
+, "kv_namespaces": 
+    [ { "binding": "CRAWLER_SCREENSHOTS_KV"
+      , "id": "3bbc3e2c21f84b1aa9c36e54e543cf19"
+      }
+    , { "binding": "CRAWLER_LINKS_KV"
+      , "id": "5a2272aa4ddd48e29c542801e009399e"
+      }
+    ]
+, "queues": 
+    { "consumers": 
+        [ { "queue": "bobbin"
+          , "max_batch_timeout": 60
+          }
+        ]
+    , "producers": 
+        [ { "queue": "bobbin"
+          , "binding": "CRAWLER_QUEUE"
+          }
+        ]
+    }
+}
