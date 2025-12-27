@@ -1,2 +1,16 @@
 pages/.wrangler/**
 pages/node_modules/**
+
+.DS_Store
+
+# Security Certs
+.env
+*.key
+*.pem
+*.cert
+*.crt
+*.pfx
+*.p12
+*.p7b
+
+REPORT/*
