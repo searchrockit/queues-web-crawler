@@ -4,8 +4,7 @@ on:
   workflow_dispatch: {}
   push: 
     branches:
-      - main
-      - master
+      - primary
   schedule:
     - cron: '0 0 * * *'
 name: Semgrep config
